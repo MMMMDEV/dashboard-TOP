@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+/* full page */
+
+.container {
+    display: flex;
+}
+
+/* side bar */
+
+.sidebar {
+    display: grid;
+}
+
+/* content */
+
+.content {
+    display: flex;
+}
+
+/* header */
+
+.header {
+    display: flex;
+}
+
+/* main */
+
+.main {
+    display: grid;
+}
