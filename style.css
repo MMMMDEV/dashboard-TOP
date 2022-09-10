@@ -1,17 +1,49 @@
+:root {
+    --background-color: rgb(226, 226, 226);
+    --main-color: rgb(147, 210, 147);
+}
+
 * {
     box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
 }
 
 /* full page */
 
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
 }
 
 /* side bar */
 
 .sidebar {
     display: grid;
+    grid-template-rows: 1fr 3fr 3fr;
+    background-color: var(--main-color);
+}
+
+.dashboard-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-nav-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-nav-adjustments {
+    display: flex;
+    flex-direction: column;
 }
 
 /* content */
