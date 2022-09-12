@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Poppins&display=swap');
+
 :root {
     --background-color: rgb(226, 226, 226);
-    --main-color: rgb(147, 210, 147);
+    --main-color: rgb(82, 80, 171);
     --header-color: white;
+    --text-color-white:  rgb(237, 237, 237);
+    --header-height: 15vh;
     --sidebar-width: 100%;
     --sidebar-btn-width: 50px;
 }
@@ -17,8 +21,13 @@ html, body {
 
 /* full page */
 
+p {
+    margin: 0;
+}
+
 h2 {
     font-size: 1.8rem;
+    margin: 0;
 }
 
 h3 {
@@ -38,6 +47,7 @@ h3 {
 
 .sidebar {
     width: var(--sidebar-width);
+    height: 100%;
     display: grid;
     grid-template-rows: 0.75fr 3fr 4fr;
     background-color: var(--main-color);
@@ -47,12 +57,11 @@ h3 {
 .dashboard-text {
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.sidebar-btn {
-    width: var(--sidebar-btn-width);
-    transition: 0.4s;
+    justify-content: left;
+    padding-left: 50px;
+    font-size: 2.1rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color-white);
 }
 
 .user-nav-main {
@@ -69,6 +78,28 @@ h3 {
 
 .nav-btn {
     height: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 2rem;
+    text-align: left;
+    padding-left: 50px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color-white);
+    border: none;
+}
+
+.nav-btn:hover {
+    border-bottom: 1px solid black;
+    color: var(--text-color-white);
+}
+
+.icons {
+    height: 90px;
+}
+
+a , a:visited {
+    color: var(--text-color-white);
+    text-decoration: none;
 }
 
 /* content */
@@ -84,9 +115,13 @@ h3 {
 /* header */
 
 .header {
+    width: 100%;
+    height: var(--header-height);
     display: grid;
     grid-template-rows: 1fr 2fr;
     background-color: var(--header-color);
+    font-family: 'Mukta', sans-serif;
+    box-shadow: 0px 2px 6px rgb(105, 105, 105);
 }
 
 .header-top {
@@ -100,7 +135,6 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
 }
 
 .icon-glass {
@@ -109,12 +143,14 @@ h3 {
     align-items: center;
     width: 50px;
     height: 50px;
-    background-color: aqua;
 }
 
 .searchbar {
+    height: 40px;
     display: flex;
     flex: 1;
+    border: 1.5px solid black;
+    border-radius: 10px;
 }
 
 .profile-nav {
@@ -130,7 +166,6 @@ h3 {
     align-items: center;
     width: 50px;
     height: 50px;
-    background-color: aqua;
 }
 
 .icon-user {
@@ -139,7 +174,6 @@ h3 {
     align-items: center;
     width: 60px;
     height: 60px;
-    background-color: aqua;
 }
 
 .header-bottom {
@@ -163,37 +197,53 @@ h3 {
     align-items: center;
     width: 80px;
     height: 80px;
-    background-color: aqua;
+}
+
+.bigger-icon {
+    width: 80px;
 }
 
 .welcome-text {
     display: flex;
-    display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: left;
     flex-direction: column;
 }
 
 .username-user {
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    font-size: 1.2rem;
 }
 
 .social-btns {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
 }
 
 .social-btn {
-    width: 80px;
-    height: 40px;
+    width: 110px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--main-color);
+    color: var(--text-color-white);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: -2px -2px 2px 1px black;
+    transition: 0.4s;
+}
+
+.social-btn:hover {
+    box-shadow: none;
+    translate: -3px -3px ;
 }
 
 /* main */
@@ -203,6 +253,7 @@ h3 {
     height: 100%;
     display: grid;
     grid-template-columns: minmax(1200px, 3fr) 0.8fr;
+    font-family: 'Mukta', sans-serif;
 }
 
 .projects {
@@ -223,12 +274,69 @@ h3 {
 }
 
 .card {
-    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--text-color-white);
+    border-radius: 10px;
+    box-shadow: -2px -2px 2px 1px black;
+    transition: 0.4s;
+}
+
+.card1 {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: left;
+    background-color: var(--text-color-white);
+    border-radius: 10px;
+    box-shadow: -2px -2px 2px 1px black;
+    transition: 0.4s;
+}
+
+.card1:hover , .card:hover {
+    box-shadow: none;
+    translate: -3px -3px ;
+    border: 4px dotted black;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.card-txt {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+}
+
+.top-card {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    width: 100%;
+    height: 25%;
+}
+
+.bottom-card {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    width: 100%;
+    height: 75%;
 }
 
 .add-card {
     width: 100%;
     height: 100%;
+    border: none;
+    border-radius: 10px;
 }
 
 .right-main {
@@ -236,7 +344,6 @@ h3 {
     grid-template-rows: 1fr 1fr;
     margin-right: 50px;
     margin-top: 50px;
-    gap: 25px;
 }
 
 .announcements {
@@ -245,6 +352,7 @@ h3 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 15px;
 }
 
 .title-announcement {
@@ -260,13 +368,16 @@ h3 {
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr;
     background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px rgb(101, 101, 101);
 }
 
 .announcement {
     width: 85%;
     transition: 0.4s;
+    padding: 10px;
 }
 
 .announcement1, .announcement2 {
@@ -279,6 +390,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 15px;
 }
 
 .title-trending {
@@ -294,6 +406,8 @@ h3 {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px rgb(101, 101, 101);
 }
 
 .profiles-trending {
@@ -305,7 +419,7 @@ h3 {
 }
 
 .left-icon {
-    width: 40%;
+    width: 30%;
     height: 100%;
     display: flex;
     justify-content: center;
